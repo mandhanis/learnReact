@@ -1,10 +1,9 @@
 import React, {Component, Fragment} from "react";
 import './Product.css'
-import Logo from '../../assets/JipenFood.png'
-import Cart from '../../assets/cart.png'
-import CardProduct from "../CardProduct/CardProduct";
-console.log(Logo);
-console.log(Cart);
+import Logo from '../../../assets/JipenFood.png'
+import Cart from '../../../assets/cart.png'
+import CardProduct from "./CardProduct/CardProduct";
+import { connect } from "react-redux";
 
 class Product extends Component {
     state = {
@@ -26,7 +25,7 @@ class Product extends Component {
                     </div>
                     <div className="troley">
                         <img src={Cart} alt=""></img>
-                        <div className="count">{this.state.order}</div>
+                        <div className="count">{this.props.order}</div>
                     </div>
                 </div>
                 <CardProduct onCounterChange={(value)=> this.handleCounterChange(value)} />
@@ -35,6 +34,11 @@ class Product extends Component {
     }
 }
 
+const mapStateToProps = state => {
+    return {
+        order: state.totalOrder
+    }
+}
 
 
-export default Product; 
+export default connect(mapStateToProps)(Product); 

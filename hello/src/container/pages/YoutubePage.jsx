@@ -1,21 +1,12 @@
 import React, {Component} from "react";
-// import YoutubeComp from "../../components/YoutubeComp/YoutubeComp";
-// import Product from "../Product/Product";
-// import LifeCycleComp from "../LifeCycleComp/LifeCycleComp";
-// import BlogPost from "../BlogPost/BlogPost";
+import YoutubeComp from "../../components/YoutubeComp/YoutubeComp";
+import { connect } from "react-redux";
 
-class Home extends Component {
-    state = {
-        showComponent: true
-    }
-componentDidMount(){
-
-}
-
+class YoutubePage extends Component {
     render(){
         return (
             <div>
-                {/* <p>Youtube Component</p>
+                 <p>Youtube Component</p>
                 <hr />
                 <YoutubeComp 
                     time="9.16" 
@@ -34,24 +25,17 @@ componentDidMount(){
                     title="Tutorial React JS - Bagian 4" 
                     desc="47K views. 3 years ago" />
                 <YoutubeComp />
-                }
-                {/* <p>LifeCycle Componenet</p>
-                <hr />
-                {
-                    this.state.showComponent
-                    ?
-                    <LifeCycleComp />
-                    : null
-                } */}
-                {/* <p>Blog Post</p>
-                <hr />
-                <BlogPost /> */}
-                {/* <p>Product</p>
-                <Product />  */}
-                ini home
+                <br />
+                    <p>Total Order: {this.props.order} </p> 
             </div>
         )
     }
 }
 
-export default Home;
+const mapStateToProps = state => {
+    return{
+        order: state.totalOrder
+    }
+}
+
+export default connect(mapStateToProps)(YoutubePage);

@@ -10,22 +10,22 @@
     border: 1px solid rgba(0, 0, 0, 0.3);
     width: 500px;
     padding: 10px;
-    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5); 
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     margin-bottom: 4px;
     margin-left: 20px;
 }
 
 .img-thumb {
-    width: 200px;
+    width: 50%;
     height: 150px;
     margin-right: 20px;
 }
 
 .img-thumb img {
-    width: 200px;
+    width: 50%;
     height: 150px;
-    object-fit: cover;
+    margin-right: 20px;
 }
 
 .content {
@@ -46,72 +46,60 @@
     color: #4a4a4a;
 }
 
+
 .remove {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 20px ;
-    padding: 12px 18px;
-    background: red;
+    padding: 10px 14px;
+    background: #e92e63;
     color: white;
-    font-size: 10px;
-    text-align: center;
-    border-radius: 4px;
-    border: none;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 18px;
 }
 
-.update {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 70px;
-    height: 20px ;
-    padding: 12px 18px;
-    background: yellowgreen;
+button.update {
+    padding: 10px 14px;
+    background: #8bc34a;
     color: white;
-    font-size: 10px;
-    text-align: center;
-    border-radius: 4px;
-    border: none;
+    border-radius: 6px;
+    outline: none;
+    margin-top: 18px;
+    margin-right: 10px;
 }
 
-.remove:hover, .update:hover{
+.remove:hover, .update:hover {
     cursor: pointer;
 }
 
-.form-add-post{
+.form-add-post {
     box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.5);
     width: 500px;
     margin-left: 20px;
     padding: 10px;
     margin-bottom: 50px;
-    border-bottom: 10px;
+    border-radius: 4px;
 }
 
 .form-add-post label {
     display: block;
     font-size: 14px;
-    color: #607D88;
+    color: #607d8b;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 .form-add-post input, .form-add-post textarea {
     outline: none;
-    border: 1px solid #607D88;
+    border: 1px solid #607d8b;
     padding: 12px;
     border-radius: 4px;
     margin-bottom: 20px;
     width: 100%;
     box-sizing: border-box;
     font-size: 12px;
-    color: #607D88;
+    color: #607d8b;
 }
 
-button.btn-submit{
+button.btn-submit {
     outline: none;
     border: 1px solid #2196f3;
     padding: 10px 30px;
@@ -119,9 +107,9 @@ button.btn-submit{
     color: #2196f3;
     text-transform: uppercase;
     font-weight: bold;
-    margin-top: 30px q q;
+    margin-top: 30px;
 }
 
-button:hover{
-    cursor: pointer;
+button:hover {
+   cursor: pointer;
 }
